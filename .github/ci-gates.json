@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "level": "C1",
+  "preset": "auto",
+  "caseRoot": "test",
+  "lanes": {
+    "build": {
+      "commands": [
+        "npm run build"
+      ]
+    },
+    "pr-ready": {
+      "commands": [
+        "npm run lint",
+        "npm test"
+      ]
+    },
+    "pr-merge": {
+      "commands": [
+        "npm run lint",
+        "npm test"
+      ]
+    },
+    "daily": {
+      "commands": [
+        "npm run lint",
+        "npm test"
+      ]
+    },
+    "release": {
+      "commands": [
+        "npm run build"
+      ]
+    }
+  }
+}
